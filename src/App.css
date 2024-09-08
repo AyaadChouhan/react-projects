@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace ;
+    font-size: x-large;
+    background: #000;
+    color: white ;
+    /* height: 100vh; */
+  }
+
+  .App{
+    align-items: center;
+  }
+
+  .header{
+    margin: 100px auto 50px;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    height: 50px;
+    background: cornflowerblue;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  .btn:hover{
+    cursor: pointer;
+  }
+  input:hover{
+    cursor: pointer;
+  }
+  input:hover{
+    cursor: pointer;
+  }
+  .inp{
+    border: none;
+    outline: none;
+    color: white;
+    background: cornflowerblue;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+  }
+  .btn{
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    background: cornflowerblue;
+    padding: 10px;
+  }
+  .elBar{
+    margin : 70px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(194, 194, 194);
+    height: 100px;
+    width:fit-content;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  label{
+    border: 1px solid grey;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
