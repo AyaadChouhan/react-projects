@@ -27,16 +27,19 @@ function App() {
     setstate(pass);
   }, [length, number, char, setstate]);
 
+  const copyPassword = useCallback(()=>{
+   window.navigator.clipboard.writeText(state)
+  }, [state]);
+
   useEffect(() => {
     passGenerator();
   }, [passGenerator, length, number, char]);
-
   return (
     <div className="App">
       <span className='header'>
         {passGenerator}
         <input type="text" readOnly value={state} placeholder="Pass-Generator" className="inp" />
-        <button className='btn'>copy</button>
+        <button onClick={copyPassword} className='btn'>copy</button>
       </span>
 
       <div className="elBar">
