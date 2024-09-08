@@ -1,7 +1,8 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import "./App.css";
 
 function App() {
+  const passRef = useRef(null)
   const [state, setstate] = useState();
   const [length, setLength] = useState(8);
   const [number, setNumber] = useState(false);
@@ -28,8 +29,10 @@ function App() {
   }, [length, number, char, setstate]);
 
   const copyPassword = useCallback(()=>{
+    passRef.current?.select()
    window.navigator.clipboard.writeText(state)
   }, [state]);
+
 
   useEffect(() => {
     passGenerator();
@@ -38,7 +41,7 @@ function App() {
     <div className="App">
       <span className='header'>
         {passGenerator}
-        <input type="text" readOnly value={state} placeholder="Pass-Generator" className="inp" />
+        <input type="text" readOnly value={state} placeholder="Pass-Generator" className="inp" ref={passRef}/>
         <button onClick={copyPassword} className='btn'>copy</button>
       </span>
 
